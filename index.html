@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake Game</title>
+</head>
+
+<body>
+    <div class="App">
+        <div class="scorebar">
+            <ul id="score-items">
+                <li><img src="./GameFiles/fruit.png" class="food-score"><span id="score">0</span></li>
+                <li><img src="./GameFiles/trophy.png" class="food-highscore"><span id="highscore">0</span></li>
+                <li><img src="./GameFiles/settings.png" onclick="game_settings()"></li>
+            </ul>
+        </div>
+        <div id="startgame">
+            <h1>Welcome to Snake Game</h1>
+            <div>
+                <img src="./GameFiles/controls.png" alt="">
+                <h3>Use Arrow buttons to move the snake</h3>
+            </div>
+            <button class="start-button" onclick="start_game()">Start Game</button>
+        </div>
+        <div id="endgame">
+            <h1>Game Over</h1>
+            <button class="restart-button" onclick="restart_game()"><img src="./GameFiles/restart.png" alt=""></button>
+        </div>
+        <div id="resume">
+            <h1>Game Paused</h1>
+            <button class="resume-button" onclick="resume_game()">Resume</button>
+        </div>
+
+        <div id="settings">
+            <button class="close-button" onclick="game_settings()">X</button>
+            <h1>Settings</h1>
+            <hr style="width: 100%;">
+            <ul class="options">
+                <li><span>Volume</span>
+                    <div class="volumebar">
+                        <div id="volumeval"></div>
+                    </div>
+                    <div class="volume-buttons"><button onclick="vol_inc()">+</button><button
+                            onclick="vol_dec()">-</button></div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="gameBoard">
+
+        </div>
+        <div id="gameStatus">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
